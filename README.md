@@ -20,7 +20,7 @@ Essa é a aplicação Github Explorer, nela o usuário consegue cadastrar reposi
 
 Adicionei um efeito de loading quando as informações de um repositório estão carregando ao acessar a página de um repositório específico.
 
-## Tecnologias
+## :hammer: Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [ReactJS](https://reactjs.org/)
