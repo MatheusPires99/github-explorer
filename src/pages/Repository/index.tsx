@@ -6,6 +6,8 @@ import api from "../../services/api";
 
 import logo from "../../assets/logo.svg";
 
+import SkeletonLoading from "../../components/SkeletonLoading";
+
 import { Header, RepositoryInfo, Issues } from "./styles";
 
 interface RepositoryParams {
@@ -38,9 +40,12 @@ const Repository: React.FC = () => {
 
   const [repository, setRepository] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadRepositoryInfo(): Promise<void> {
+      setLoading(true);
+
       const [responseRepo, responseIssues] = await Promise.all([
         api.get(`repos/${params.repository}`),
         api.get(`repos/${params.repository}/issues`),
@@ -48,6 +53,8 @@ const Repository: React.FC = () => {
 
       setRepository(responseRepo.data);
       setIssues(responseIssues.data);
+
+      setLoading(false);
     }
 
     loadRepositoryInfo();
@@ -64,48 +71,54 @@ const Repository: React.FC = () => {
         </Link>
       </Header>
 
-      {repository && (
-        <RepositoryInfo>
-          <header>
-            <img
-              src={repository.owner.avatar_url}
-              alt={repository.owner.login}
-            />
-            <div>
-              <strong>{repository.full_name}</strong>
-              <span>{repository.description}</span>
-            </div>
-          </header>
+      {loading ? (
+        <SkeletonLoading />
+      ) : (
+        <>
+          {repository && (
+            <RepositoryInfo>
+              <header>
+                <img
+                  src={repository.owner.avatar_url}
+                  alt={repository.owner.login}
+                />
+                <div>
+                  <strong>{repository.full_name}</strong>
+                  <span>{repository.description}</span>
+                </div>
+              </header>
 
-          <ul>
-            <li>
-              <strong>{repository.stargazers_count}</strong>
-              <span>Stars</span>
-            </li>
-            <li>
-              <strong>{repository.forks_count}</strong>
-              <span>Forks</span>
-            </li>
-            <li>
-              <strong>{repository.open_issues_count}</strong>
-              <span>Issues abertas</span>
-            </li>
-          </ul>
-        </RepositoryInfo>
+              <ul>
+                <li>
+                  <strong>{repository.stargazers_count}</strong>
+                  <span>Stars</span>
+                </li>
+                <li>
+                  <strong>{repository.forks_count}</strong>
+                  <span>Forks</span>
+                </li>
+                <li>
+                  <strong>{repository.open_issues_count}</strong>
+                  <span>Issues abertas</span>
+                </li>
+              </ul>
+            </RepositoryInfo>
+          )}
+
+          <Issues>
+            {issues.map((issue) => (
+              <a key={issue.id} href={issue.html_url} target="__blank">
+                <div>
+                  <strong>{issue.title}</strong>
+                  <span>{issue.user.login}</span>
+                </div>
+
+                <FiChevronRight size={20} color="#cbcbd6" />
+              </a>
+            ))}
+          </Issues>
+        </>
       )}
-
-      <Issues>
-        {issues.map((issue) => (
-          <a key={issue.id} href={issue.html_url} target="__blank">
-            <div>
-              <strong>{issue.title}</strong>
-              <span>{issue.user.login}</span>
-            </div>
-
-            <FiChevronRight size={20} color="#cbcbd6" />
-          </a>
-        ))}
-      </Issues>
     </>
   );
 };
