@@ -1,13 +1,12 @@
 <h1 align="center">
     <img alt="GoStack" src="https://ik.imagekit.io/hwyksvj4iv/logo_zY2nEMAlc.svg" width="250px" />
-    <p align="center">
-      <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MatheusPires99/github-explorer">
-      <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MatheusPires99/github-explorer">
-      <img alt="Repository size" src="https://img.shields.io/github/repo-size/MatheusPires99/github-explorer">
-    </p>
 </h1>
 
-
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MatheusPires99/github-explorer">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MatheusPires99/github-explorer">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/MatheusPires99/github-explorer">
+</p>
 
 <p align="center">
   <a href="#page_with_curl-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
