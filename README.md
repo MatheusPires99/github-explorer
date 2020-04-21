@@ -19,7 +19,7 @@
 
 ![github_explorer](.github/github_explorer10.gif)
 <p align="center">
-  <a href="https://nervous-brattain-e27e17.netlify.app/" target="__blank">Demo da aplicação</a>
+  <a href="https://nervous-brattain-e27e17.netlify.app/" target="_blank">Demo da aplicação</a>
 </p>
 
 ## :page_with_curl: Sobre
