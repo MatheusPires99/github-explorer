@@ -11,7 +11,7 @@
   <a href="#gear-iniciando-front-end">ReactJS</a>
 </p>
 
-![github_explorer](.github/github_explorer.gif)
+![github_explorer](.github/github_explorer10.gif)
 
 ## :page_with_curl: Sobre
 Este repositório contém uma aplicação em ReactJS utilizando TypeScript.
