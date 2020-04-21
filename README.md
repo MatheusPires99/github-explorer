@@ -1,8 +1,14 @@
 <h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
-    <br>
-    Github Explorer
+    <img alt="GoStack" src="https://ik.imagekit.io/hwyksvj4iv/logo_zY2nEMAlc.svg" width="200px" />
 </h1>
+
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MatheusPires99/github-explorer">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MatheusPires99/github-explorer">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/MatheusPires99/github-explorer">
+</p>
 
 <p align="center">
   <a href="#page_with_curl-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -12,6 +18,9 @@
 </p>
 
 ![github_explorer](.github/github_explorer10.gif)
+<p align="center">
+  <a href="https://nervous-brattain-e27e17.netlify.app/">Demo da aplicação</a>
+</p>
 
 ## :page_with_curl: Sobre
 Este repositório contém uma aplicação em ReactJS utilizando TypeScript.
