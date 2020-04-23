@@ -15,11 +15,9 @@
   <a href="#gear-iniciando-front-end">ReactJS</a>
 </p>
 
-<h1 align="center">
-  <img alt="Github Explorer" src="https://res.cloudinary.com/matheuspires/image/upload/v1587645519/github_explorer10_hrueqg.gif" />
-</h1>
-
 <p align="center">
+  <img alt="Github Explorer" src="https://res.cloudinary.com/matheuspires/image/upload/v1587645519/github_explorer10_hrueqg.gif" />
+  <br />
   <a href="https://github-explorer-gostack.netlify.app/">Demo da aplicação</a>
 </p>
 
