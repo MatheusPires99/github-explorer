@@ -18,6 +18,7 @@
 <h1 align="center">
   <img alt="Github Explorer" src="https://res.cloudinary.com/matheuspires/image/upload/v1587645519/github_explorer10_hrueqg.gif" />
 </h1>
+
 <p align="center">
   <a href="https://github-explorer-gostack.netlify.app/">Demo da aplicação</a>
 </p>
